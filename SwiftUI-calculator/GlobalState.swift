@@ -58,6 +58,10 @@ class GlobalState: ObservableObject {
         case .allClear, .clear:
             display = CalculatorKey.zero.rawValue
             
+        case .equal:
+            calculate()
+            storedValue = nil
+            
         default: break
         }
     }
